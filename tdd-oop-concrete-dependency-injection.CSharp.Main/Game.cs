@@ -9,12 +9,11 @@ namespace tdd_oop_concrete_dependency_injection.CSharp.Main
     public class Game 
     {
         public string name;
-        private static List<Game> preInstalledGames = new List<Game>();
-        public static List<Game> InstalledGames { get { return preInstalledGames; } }
+        private static List<Game> installedGames = new List<Game>();
+        public static List<Game> InstalledGames { get { return installedGames; } }
 
         public Game(string name) {
            this.name = name;
-            preInstalledGames.Add(this);
         }
 
         public String start() {
@@ -23,7 +22,7 @@ namespace tdd_oop_concrete_dependency_injection.CSharp.Main
 
         public void AddGame(Game game)
         {
-            preInstalledGames.Add(game);
+            installedGames.Add(game);
         }
     }
 }
